@@ -1,9 +1,47 @@
-.top{
-	margin: auto;
-	width:50%;
+@fontface {
+  font-family: 'Open Sans', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Open+Sans')
+}
+@fontface {
+  font-family: 'Droid Sans', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Droid+Sans')
 }
 
+.top{
+	margin: auto;
+	width:100%;
+}
+
+.expectedScreen{
+	font-family:'Droid Sans', sans-serif;
+	margin-top: 2%;
+	margin-left:8%;
+	margin-right:8%;
+	font-size: 60px;
+	text-align:center;
+	font-weight:bold;
+	color:white;
+	text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+	background-color: #d3d3d3;
+	border-width:2px;
+	border-style: solid;
+	border-color:black;
+}
 .verifyScreenWarning{
 	text-align: center;
-	
+	font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	margin-left:15%;
+	margin-right:15%;
+	padding-top: 2%;
+}
+
+.buttonWrapper{
+	height:100px;
+}
+
+.linkWrapper{
+	margin-left: 8%;
+	text-align: left;
+	font-size:18px;
 }

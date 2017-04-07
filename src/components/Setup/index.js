@@ -14,13 +14,10 @@ class Setup extends Component {
     this.state = {
       status: 'login-button'
     };
-
     this.handleClick = () => {
       if(this.state.status === 'login-button'){
-        console.log('hiiiii');
         this.setState({status: 'login-button loading'});
       }else{
-        console.log('hooooo');
         this.setState(
           {status: 'login-button'}
         )
@@ -29,26 +26,30 @@ class Setup extends Component {
   }
 
   handleClick(){
-    
+
   }
 
   render() {
     //const { className, ...props } = this.props;
     return (
       <div className="top">
-       <Title>
-       </Title>
-
-
+       <Title></Title>
        <div className="verifyScreenWarning">
-        Please verify the Setup screen on your picasso.
+        Please verify the screen on your PiCasso is similar to the one below.
        </div>
-       <Button text="Begin Setup" className={this.state.status} handleClick={this.handleClick}></Button>
-       <div>
-        Don't see the Setup screen?
+       <div className="expectedScreen">
+          <div> Welcome </div>
+          <div> to </div>
+          <div> PiCasso </div>
+      </div>
+      <div className="buttonWrapper">
+       <Button text="Begin Setup" to="/Setup2" className={this.state.status} handleClick={this.handleClick} ></Button>
        </div>
-       <div>
-        Cancel
+       <div className="linkWrapper">
+        <a href="">Don't see the Setup screen?</a>
+       </div>
+       <div className="linkWrapper">
+        <a href="">Cancel</a>
        </div>
       </div>
     );

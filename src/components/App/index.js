@@ -15,6 +15,9 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to PiCasso</h2>
         </div>
+        <div>
+          <h3> This view will display photos </h3>
+        </div>
       </div>
     );
   }

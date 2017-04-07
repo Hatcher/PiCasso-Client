@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 import classnames from 'classnames';
 
 import './style.css';
@@ -18,7 +19,11 @@ export default class Button extends Component {
   render() {
     return (
       <div className="container">
-        <button onClick={this.handleClick} className={this.props.className} >{this.props.text}</button>
+        <button onClick={this.handleClick} className={this.props.className}>
+        <Link to={""+this.props.to}>
+        {this.props.text}
+        </Link>
+        </button>
       </div>
     );
   }
