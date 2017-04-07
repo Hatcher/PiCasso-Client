@@ -1,0 +1,16 @@
+.top{
+	margin: auto;
+	width:50%;
+}
+
+.verifyScreenWarning{
+	text-align: center;
+	
+}
+
+input[type="text"] {
+  margin-top: 10px;
+  height: 25px;
+  font-size: 15px;
+  width:100%;
+}

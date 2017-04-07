@@ -1,0 +1,10 @@
+.title{
+	margin: auto;
+	border: 2px solid black;
+	padding: 5px;
+}
+
+.titleText{
+	margin: auto;
+	text-align: center;
+}
