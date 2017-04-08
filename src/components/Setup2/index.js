@@ -1,29 +1,31 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
 
-import Title from '../Common/Title/Title';
-import Button from '../Common/Button/Button';
+import { Title, Button } from '../Common';
 import './style.css';
 
 class Setup2 extends Component {
   // static propTypes = {}
   // static defaultProps = {}
   // state = {}
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      status: 'login-button'
+    };
+    this.handleClick = () => {
+      if(this.state.status === 'login-button'){
+        this.setState({status: 'login-button loading'});
+      }else{
+        this.setState(
+          {status: 'login-button'}
+        )
+      }
+    }
   }
 
-  handleChange(event){
-    this.setState({value: event.target.value});
-  }
+  handleClick(){
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
   }
 
   render() {
@@ -43,7 +45,8 @@ class Setup2 extends Component {
         </label>
         </div>
         <div>
-        <label>Which holidays do you observe? 
+        <label>
+          <div className="formQuestion">Which holidays do you observe?</div>
           <div className="inputRow">
           <input type="radio" name="Christmas" id="Christmas" value={this.state.value} onChange={this.handleChange}/>
           <label for="Christmas">Christmas</label>
@@ -58,13 +61,24 @@ class Setup2 extends Component {
           <input type="radio" name="Thanksgiving" value={this.state.value} onChange={this.handleChange} />Thanksgiving
           </div>
         </label>
+        <label>
+          <div className="formQuestion">Do you have another question?</div>
+          <div className="inputRow">
+          <input type="radio" name="questonHold1" id="questonHold1" value={this.state.value} onChange={this.handleChange}/>
+          <label for="questonHold1">No</label>
+          </div>
+          <div className="inputRow">
+          <input type="radio" name="questionHold2" value={this.state.value} onChange={this.handleChange} />questionHold2
+          </div>
+          <div className="inputRow">
+          <input type="radio" name="questionHold3" value={this.state.value} onChange={this.handleChange} />questionHold3
+          </div>
+        </label>
         </div>
 
-        
-        <Button text="Next" value ="Submit" type="Submit"><input type="submit" value="Submit" /></Button>
+
+        <Button text="Next" to="/Setup3" className={this.state.status} handleClick={this.handleClick} ><input type="submit" value="Submit" /></Button>
       </form>
-       
-      
       </div>
     );
   }

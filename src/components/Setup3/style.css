@@ -25,6 +25,12 @@
 	background-color: grey;
 }
 
+.buttonWrapper{
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .plusSign{
 	position: absolute;
 	padding-left: 27%;
@@ -34,6 +40,8 @@
 
 .dropzoneContainer{
 	margin: auto;
+	padding-bottom:60px;
+	margin-top: 40px;
 	width: 50%;
 }
 
