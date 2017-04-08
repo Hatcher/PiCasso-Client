@@ -77,7 +77,7 @@ class Setup2 extends Component {
         </div>
 
 
-        <Button text="Begin Setup" to="/Setup3" className={this.state.status} handleClick={this.handleClick} ><input type="submit" value="Submit" /></Button>
+        <Button text="Next" to="/Setup3" className={this.state.status} handleClick={this.handleClick} ><input type="submit" value="Submit" /></Button>
       </form>
       </div>
     );
